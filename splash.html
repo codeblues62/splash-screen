@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Splash Screen ~ CodeXDeres</title>
+</head>
+<body id="root">
+  <style>
+    #root {
+	padding: 0;
+	margin: 0;
+  }
+  .content {
+    max-width: 850px;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 30%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Splash Screen Styling */
+  .splash {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: coral;
+    color: white;
+    text-align: center;
+    line-height: 100vh;
+  }
+  .display-none {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: coral;
+    color: white;
+    text-align: center;
+    line-height: 100vh;
+    transition: all 0.35s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    font-size: 100px;
+    animation: fadeIn 1s ease-in forwards;
+  }
+  </style>
+	<!-- Splash Screen -->
+	<div class="splash">
+		<h1 class="fade-in">CodeX Indonesia</h1>
+	</div>
+
+	<div class="content">
+		<h1 style="text-align: center;">
+			SPLASH SCREEN
+		</h1>
+		<hr width="350">
+		<p>Layar splash adalah elemen kontrol grafis yang terdiri dari jendela yang berisi gambar, logo, dan versi perangkat lunak saat ini. Layar splash dapat muncul saat permainan atau program diluncurkan. Halaman pembuka adalah halaman pengantar di situs web.!</p>
+	</div>
+  <script>
+    const splash = document.querySelector(".splash");
+
+    document.addEventListener("DOMContentLoaded", (e) => {
+      setTimeout(() => {
+        splash.classList.add("display-none");
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
